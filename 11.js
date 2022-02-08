@@ -1,15 +1,15 @@
-// Напишите функцию countIdentic(arr), которая возвращает количество повторяющихся элементов в массиве.
-
-function countIdentic(arr) {
-    let res = {};
-    for(let i of arr){
-        if(res[i] == null){
-            res[i] = 1;
-        }
-        else res[i]++;
-    }
-    console.log(res);
+// Напишите функцию getAverageAge(users), которая принимает массив объектов со свойством age и возвращает средний возраст.
+// Формула вычисления среднего арифметического значения: (age1 + age2 + ... + ageN) / N
+function getAverageAge(arr){
+    return arr.reduce((accum, item) => {
+        return accum + item.age;
+    }, 0) / arr.length;
 }
 
-countIdentic([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]) // 4
-countIdentic([15,14,13,19,13,14,14,14,7,9,9]) // 3  
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [ vasya, petya, masha ];
+
+getAverageAge(arr);
