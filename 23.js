@@ -2,18 +2,19 @@
 // document.writeln(res1); // Кап
 // document.writeln(res2); // Ре
 function startingSubstring(arg){
-    let answer = [];
+    let x = [];
     let a = arg[0], b = arg[1];
 
     for (let i = 0; i < a.length; i++) {
         if(a[i] === b[i]){
-            answer.push(a[i]);
+            x.push(a[i]);
         }
         else{
             break;
         }
     }
-    console.log(answer);
+    let answer = x.join("");
+    document.writeln(answer);
 }
 
 var arr1 = ['Капуста', 'Капитал'];
